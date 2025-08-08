@@ -1,5 +1,3 @@
-# Super Job Wizard - 超级求职神器 - 包含文件清单
-
 include README.md
 include LICENSE
 include requirements.txt
@@ -7,14 +5,12 @@ include *.py
 include *.md
 include *.txt
 
-# 包含重要目录
 recursive-include src *.py
 recursive-include config *.json
 recursive-include docs *.md
 recursive-include scripts *.py *.bat
 recursive-include tests *.py
 
-# 排除不必要的文件
 exclude *.pyc
 exclude __pycache__/*
 exclude .git/*

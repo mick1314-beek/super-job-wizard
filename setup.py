@@ -27,13 +27,13 @@ def read_requirements():
 
 setup(
     name="super-job-wizard",
-    version="2.0.0",
+    version="2.0.1",
     author="Super Job Wizard Team",
     author_email="support@super-job-wizard.com",
     description="AI驱动的超级求职助手 - 集成全球化数据分析、智能决策支持、大数据洞察、平台集成和AI分析的终极求职工具",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/super-job-wizard",
+    url="https://github.com/mick1314-beek/super-job-wizard",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
