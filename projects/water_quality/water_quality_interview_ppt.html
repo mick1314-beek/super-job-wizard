@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💧 水质监测工程师面试宝典 PPT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .ppt-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            display: none;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 20px;
+        }
+
+        .slide-title {
+            font-size: 2.5em;
+            color: #2E7D32;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .slide-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            height: calc(100% - 200px);
+        }
+
+        .content-box {
+            background: linear-gradient(145deg, #f0f8ff, #e6f3ff);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #4CAF50;
+        }
+
+        .content-box h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .content-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-box li {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.1em;
+        }
+
+        .memory-tip {
+            background: linear-gradient(45deg, #FFE082, #FFCC02);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(255, 204, 2, 0.3);
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .nav-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(76, 175, 80, 0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+            z-index: 1001;
+        }
+
+        .cover-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cover-title {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .cover-subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cover-info {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .flow-chart {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .flow-step {
+            background: #E8F5E8;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+            color: #2E7D32;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #FFEB3B !important;
+            font-weight: bold;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="ppt-container">
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- 第1页：封面 -->
+        <div class="slide active cover-slide">
+            <h1 class="cover-title">💧 水质监测工程师</h1>
+            <h2 class="cover-subtitle">面试宝典 PPT</h2>
+            <div class="cover-info">
+                <p>🎯 专为转行人员量身定制</p>
+                <p>📚 7大模块 · 16道精选题目</p>
+                <p>🚀 助你成功转行环保行业</p>
+            </div>
+        </div>
+
+        <!-- 第2页：目录 -->
+        <div class="slide">
+            <div class="slide-counter">2 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">📋 目录导航</h1>
+                <p class="slide-subtitle">面试知识体系全览</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🔬 技术核心模块</h3>
+                    <ul>
+                        <li>💡 基础理论篇 - 水质监测原理</li>
+                        <li>⚙️ 技术操作篇 - 实验室技能</li>
+                        <li>📜 法规标准篇 - 政策法规</li>
+                        <li>🔧 设备仪器篇 - 仪器操作</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>🎭 综合能力模块</h3>
+                    <ul>
+                        <li>🌊 实际应用篇 - 现场经验</li>
+                        <li>📊 数据分析篇 - 质量控制</li>
+                        <li>💼 行为面试篇 - 软技能</li>
+                        <li>🎯 面试秘诀篇 - 成功策略</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：理操法设，应数行秘 (理论操作法规设备，应用数据行为秘诀)
+            </div>
+        </div>
+
+        <!-- 第3页：基础理论篇 -->
+        <div class="slide">
+            <div class="slide-counter">3 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">💡 基础理论篇</h1>
+                <p class="slide-subtitle">水质监测核心概念</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🌊 水质监测定义</h3>
+                    <ul>
+                        <li><strong>定义：</strong>对水体中污染物进行定性定量分析</li>
+                        <li><strong>目的：</strong>评价水环境质量状况</li>
+                        <li><strong>意义：</strong>保护水资源，防治水污染</li>
+                        <li><strong>范围：</strong>地表水、地下水、废水等</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>📊 主要监测指标</h3>
+                    <ul>
+                        <li>🌡️ <strong>物理指标：</strong>温度、浊度、色度、悬浮物</li>
+                        <li>⚗️ <strong>化学指标：</strong>pH、DO、COD、BOD、氨氮</li>
+                        <li>🦠 <strong>生物指标：</strong>大肠菌群、细菌总数</li>
+                        <li>☠️ <strong>毒理指标：</strong>重金属、有机污染物</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：物化生毒四大类，温浊色悬是物理，pH溶氧COD化学，细菌病毒是生物
+            </div>
+        </div>
+
+        <!-- 第4页：技术操作篇 -->
+        <div class="slide">
+            <div class="slide-counter">4 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">⚙️ 技术操作篇</h1>
+                <p class="slide-subtitle">实验室核心技能</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🧪 COD测定步骤</h3>
+                    <div class="flow-chart" style="flex-direction: column;">
+                        <div class="flow-step" style="margin: 5px 0;">1. 样品预处理</div>
+                        <div class="flow-step" style="margin: 5px 0;">2. 加入重铬酸钾</div>
+                        <div class="flow-step" style="margin: 5px 0;">3. 硫酸银催化</div>
+                        <div class="flow-step" style="margin: 5px 0;">4. 回流消解2小时</div>
+                        <div class="flow-step" style="margin: 5px 0;">5. 冷却后滴定</div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3>🎯 操作要点</h3>
+                    <ul>
+                        <li>🌡️ <strong>温度控制：</strong>150±2℃回流</li>
+                        <li>⏰ <strong>时间控制：</strong>严格2小时</li>
+                        <li>🧪 <strong>试剂配比：</strong>按标准严格配制</li>
+                        <li>🔍 <strong>终点判断：</strong>溶液由黄绿色变为红褐色</li>
+                        <li>📊 <strong>平行样：</strong>至少做2个平行样</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：预处理，加重铬，银催化，回流煮，冷却滴定算结果
+            </div>
+        </div>
+
+        <!-- 第5页：法规标准篇 -->
+        <div class="slide">
+            <div class="slide-counter">5 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">📜 法规标准篇</h1>
+                <p class="slide-subtitle">环保政策法规体系</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>📋 主要法律法规</h3>
+                    <ul>
+                        <li>⚖️ <strong>水污染防治法：</strong>基础法律</li>
+                        <li>🏭 <strong>环境保护法：</strong>上位法</li>
+                        <li>🌊 <strong>水法：</strong>水资源管理</li>
+                        <li>🏛️ <strong>环评法：</strong>项目审批</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>📊 重要标准规范</h3>
+                    <ul>
+                        <li>🎯 <strong>GB 3838-2002：</strong>地表水环境质量标准</li>
+                        <li>🏭 <strong>GB 8978-1996：</strong>污水综合排放标准</li>
+                        <li>🧪 <strong>HJ/T 91-2002：</strong>地表水监测技术规范</li>
+                        <li>📋 <strong>HJ 493-2009：</strong>水质采样技术指导</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：水污防治是基础，环保法是总纲领，3838质量标准，8978排放要求
+            </div>
+        </div>
+
+        <!-- 第6页：设备仪器篇 -->
+        <div class="slide">
+            <div class="slide-counter">6 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">🔧 设备仪器篇</h1>
+                <p class="slide-subtitle">分析仪器对比与应用</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>⚗️ ICP-MS vs 原子吸收</h3>
+                    <table>
+                        <tr>
+                            <th>对比项目</th>
+                            <th>ICP-MS</th>
+                            <th>原子吸收</th>
+                        </tr>
+                        <tr>
+                            <td>检出限</td>
+                            <td class="highlight">ppt级</td>
+                            <td>ppb级</td>
+                        </tr>
+                        <tr>
+                            <td>元素范围</td>
+                            <td class="highlight">70+元素</td>
+                            <td>单一元素</td>
+                        </tr>
+                        <tr>
+                            <td>分析速度</td>
+                            <td class="highlight">快速</td>
+                            <td>较慢</td>
+                        </tr>
+                        <tr>
+                            <td>设备成本</td>
+                            <td>昂贵</td>
+                            <td class="highlight">便宜</td>
+                        </tr>
+                        <tr>
+                            <td>维护成本</td>
+                            <td>高</td>
+                            <td class="highlight">低</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content-box">
+                    <h3>🎯 选择原则</h3>
+                    <ul>
+                        <li>🔬 <strong>痕量分析：</strong>首选ICP-MS</li>
+                        <li>📊 <strong>常规监测：</strong>原子吸收经济实用</li>
+                        <li>⚡ <strong>多元素：</strong>ICP-MS效率高</li>
+                        <li>💰 <strong>成本考虑：</strong>原子吸收性价比高</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：ICP-MS"痕多快贵"，原子吸收"单常慢便"
+            </div>
+        </div>
+
+        <!-- 第7页：实际应用篇 -->
+        <div class="slide">
+            <div class="slide-counter">7 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">🌊 实际应用篇</h1>
+                <p class="slide-subtitle">现场应急与质量控制</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🚨 应急监测流程</h3>
+                    <div class="flow-chart" style="flex-direction: column;">
+                        <div class="flow-step" style="margin: 5px 0;">1. 接到通知 → 快速响应</div>
+                        <div class="flow-step" style="margin: 5px 0;">2. 现场勘察 → 制定方案</div>
+                        <div class="flow-step" style="margin: 5px 0;">3. 布点采样 → 现场检测</div>
+                        <div class="flow-step" style="margin: 5px 0;">4. 实验分析 → 数据处理</div>
+                        <div class="flow-step" style="margin: 5px 0;">5. 报告编制 → 及时上报</div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3>🎯 质量控制体系</h3>
+                    <ul>
+                        <li>📋 <strong>标准操作程序(SOP)：</strong>规范操作流程</li>
+                        <li>🎯 <strong>质控样品：</strong>空白、平行、加标样</li>
+                        <li>📊 <strong>质控图表：</strong>监控分析质量</li>
+                        <li>🔍 <strong>能力验证：</strong>参加实验室比对</li>
+                        <li>📝 <strong>记录管理：</strong>完整的质量记录</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：应急监测"通勘布实报"，质控体系"程样图验录"
+            </div>
+        </div>
+
+        <!-- 第8页：数据分析篇 -->
+        <div class="slide">
+            <div class="slide-counter">8 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">📊 数据分析篇</h1>
+                <p class="slide-subtitle">异常值处理与质量评价</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🔍 异常值判断方法</h3>
+                    <ul>
+                        <li>📊 <strong>3σ法则：</strong>|x-x̄| > 3σ 为异常值</li>
+                        <li>🔍 <strong>Q检验法：</strong>适用于小样本(n<10)</li>
+                        <li>📈 <strong>Grubbs检验：</strong>正态分布数据</li>
+                        <li>👁️ <strong>目视法：</strong>明显偏离的数据点</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>📈 数据质量评价指标</h3>
+                    <table>
+                        <tr>
+                            <th>指标</th>
+                            <th>计算公式</th>
+                            <th>要求</th>
+                        </tr>
+                        <tr>
+                            <td>精密度</td>
+                            <td>RSD = S/x̄ × 100%</td>
+                            <td>< 20%</td>
+                        </tr>
+                        <tr>
+                            <td>准确度</td>
+                            <td>RE = (测定值-真值)/真值 × 100%</td>
+                            <td>< 20%</td>
+                        </tr>
+                        <tr>
+                            <td>检出限</td>
+                            <td>MDL = t × S</td>
+                            <td>满足标准要求</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：异常判断"3σ、Q、G、目"，质量评价"精准检"
+            </div>
+        </div>
+
+        <!-- 第9页：行为面试篇 -->
+        <div class="slide">
+            <div class="slide-counter">9 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">💼 行为面试篇</h1>
+                <p class="slide-subtitle">STAR法则与软技能展示</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>⭐ STAR法则模板</h3>
+                    <ul>
+                        <li>📍 <strong>Situation(情境)：</strong>描述具体情况</li>
+                        <li>🎯 <strong>Task(任务)：</strong>说明面临的任务</li>
+                        <li>🚀 <strong>Action(行动)：</strong>详述采取的行动</li>
+                        <li>🏆 <strong>Result(结果)：</strong>展示取得的成果</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>💪 优势包装话术</h3>
+                    <ul>
+                        <li>🏭 <strong>工厂经验：</strong>"15年一线经验，熟悉工业流程"</li>
+                        <li>⏰ <strong>加班能力：</strong>"能适应高强度工作，责任心强"</li>
+                        <li>📚 <strong>学习能力：</strong>"虽然学历不高，但学习能力强"</li>
+                        <li>🎯 <strong>转行动机：</strong>"看好环保行业，愿意长期发展"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 记忆口诀：STAR法则"情任行果"，优势包装"厂班学转"
+            </div>
+        </div>
+
+        <!-- 第10页：面试秘诀篇 -->
+        <div class="slide">
+            <div class="slide-counter">10 / 10</div>
+            <div class="slide-header">
+                <h1 class="slide-title">🎯 面试成功秘诀</h1>
+                <p class="slide-subtitle">转行成功的关键策略</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-box full-width">
+                    <h3>🚀 核心竞争力</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                        <div style="text-align: center; padding: 15px; background: #E8F5E8; border-radius: 10px;">
+                            <h4>🏭 丰富经验</h4>
+                            <p>15年工厂一线经验<br>熟悉工业生产流程</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: #FFF3E0; border-radius: 10px;">
+                            <h4>💪 吃苦耐劳</h4>
+                            <p>能适应高强度工作<br>责任心强执行力好</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: #F3E5F5; border-radius: 10px;">
+                            <h4>📚 学习能力</h4>
+                            <p>主动学习新知识<br>快速适应新环境</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3>🎯 面试金句</h3>
+                    <ul>
+                        <li>"我的15年工厂经验让我深知环保的重要性"</li>
+                        <li>"虽然是转行，但我有决心和毅力"</li>
+                        <li>"我愿意从基础做起，踏实学习"</li>
+                        <li>"环保是我的新起点，也是终身事业"</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>💡 最后建议</h3>
+                    <ul>
+                        <li>📈 短期：快速适应，掌握技能</li>
+                        <li>🎯 中期：成为技术骨干</li>
+                        <li>🚀 长期：在环保领域深耕发展</li>
+                        <li>💰 薪资：从8K起步，3年内达到15K+</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="memory-tip">
+                🧠 总结：经验+态度+学习=成功转行！加油，你一定可以的！💪
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">⬅️ 上一页</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">下一页 ➡️</button>
+        <button class="nav-btn" onclick="goToSlide(0)">🏠 首页</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            // 更新进度条
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // 更新按钮状态
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        // 键盘导航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'Home') goToSlide(0);
+            if (e.key === 'End') goToSlide(totalSlides - 1);
+        });
+
+        // 初始化
+        showSlide(0);
+    </script>
+</body>
+</html>

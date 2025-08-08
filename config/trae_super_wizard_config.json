@@ -1,0 +1,142 @@
+{
+  "mcpServers": {
+    "super-job-wizard": {
+      "name": "超级无敌宇宙级求职神器",
+      "description": "🚀 全球最强求职工具包 - 集成AI分析、大数据支持、智能决策的终极求职神器",
+      "command": "python",
+      "args": ["super_job_wizard.py"],
+      "cwd": "d:\\mcp-gonzhu",
+      "env": {
+        "PYTHONPATH": "d:\\mcp-gonzhu;d:\\mcp-gonzhu\\modules",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "restart": true,
+      "autoStart": true,
+      "features": {
+        "🌍 全球化数据支持": {
+          "description": "150+国家PPP数据、城市生活成本分析、全球薪资基准",
+          "tools": [
+            "get_system_status",
+            "get_supported_countries", 
+            "analyze_city_cost",
+            "convert_salary_ppp_global",
+            "get_salary_benchmark_global"
+          ]
+        },
+        "🤖 AI智能分析": {
+          "description": "AI简历优化、薪资预测、职业规划、市场趋势分析、技能差距分析",
+          "tools": [
+            "optimize_resume_with_ai",
+            "predict_salary_with_ai",
+            "plan_career_path_with_ai", 
+            "analyze_market_trends_ai",
+            "analyze_skill_gaps_ai"
+          ]
+        },
+        "📊 大数据支持": {
+          "description": "公司情报分析、行业报告、职位热度分析、技能价值评估、市场洞察",
+          "tools": [
+            "get_company_intelligence_report",
+            "generate_industry_analysis_report",
+            "analyze_job_market_hotness",
+            "generate_skill_value_analysis", 
+            "get_market_insights_report"
+          ]
+        },
+        "🔗 平台集成": {
+          "description": "LinkedIn分析、多平台追踪、邮件模板、面试管理、职位聚合、社交影响力",
+          "tools": [
+            "analyze_linkedin_profile_data",
+            "track_applications_multi_platform",
+            "generate_professional_email_templates",
+            "manage_interview_calendar",
+            "aggregate_job_listings",
+            "analyze_professional_social_influence"
+          ]
+        },
+        "🧠 智能决策": {
+          "description": "智能工作选择、职业轨迹预测、个性化建议、决策质量评估",
+          "tools": [
+            "analyze_job_decision_smart",
+            "predict_career_development_trajectory", 
+            "generate_personalized_career_advice",
+            "evaluate_career_decision_quality"
+          ]
+        },
+        "💰 工作价值计算": {
+          "description": "真实时薪计算、综合价值评估、工作机会对比（增强版）",
+          "tools": [
+            "calculate_real_hourly_wage_advanced",
+            "evaluate_job_worth_ultimate",
+            "compare_job_offers_comprehensive"
+          ]
+        },
+        "🎯 求职助手": {
+          "description": "AI简历分析、薪资谈判策略、智能申请追踪（增强版）",
+          "tools": [
+            "analyze_resume_comprehensive",
+            "generate_salary_negotiation_strategy",
+            "track_job_applications_intelligent"
+          ]
+        }
+      },
+      "usage_examples": {
+        "🌍 全球薪资对比": {
+          "description": "比较不同国家的薪资购买力",
+          "example": "convert_salary_ppp_global(100000, '美国', '中国', '年薪')"
+        },
+        "🤖 AI简历优化": {
+          "description": "使用AI优化简历内容",
+          "example": "optimize_resume_with_ai('简历内容...', '软件工程师', 'Google')"
+        },
+        "📊 公司情报分析": {
+          "description": "获取公司详细分析报告",
+          "example": "get_company_intelligence_report('Google')"
+        },
+        "🧠 智能工作选择": {
+          "description": "AI分析多个工作机会",
+          "example": "analyze_job_decision_smart('[{\"company\":\"Google\",\"salary\":300000}]', {\"risk_tolerance\":\"medium\"})"
+        },
+        "💰 终极价值评估": {
+          "description": "全面评估工作价值",
+          "example": "evaluate_job_worth_ultimate(300000, 40, 5, 8, 9, 7, 8, 8, '美国')"
+        },
+        "🎯 智能申请追踪": {
+          "description": "AI驱动的求职追踪",
+          "example": "track_job_applications_intelligent('[{\"company\":\"Google\",\"status\":\"已投递\",\"date\":\"2024-01-01\"}]')"
+        }
+      },
+      "installation_guide": {
+        "步骤1": "确保Python 3.8+已安装",
+        "步骤2": "运行 start_super_wizard.bat 一键启动",
+        "步骤3": "在Trae AI中导入此配置文件",
+        "步骤4": "开始使用超级求职神器！"
+      },
+      "troubleshooting": {
+        "模块导入失败": "检查modules目录下是否有所有模块文件",
+        "依赖包缺失": "运行 pip install mcp fastmcp requests beautifulsoup4 pandas numpy scikit-learn",
+        "编码问题": "确保环境变量PYTHONIOENCODING=utf-8",
+        "路径问题": "检查cwd和PYTHONPATH设置是否正确"
+      },
+      "performance_tips": {
+        "内存优化": "大数据分析可能占用较多内存，建议8GB+RAM",
+        "网络要求": "部分功能需要网络连接获取实时数据",
+        "缓存机制": "系统会缓存常用数据以提高响应速度",
+        "并发处理": "支持多个工具同时运行"
+      }
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "2024-01-01",
+    "author": "AI Assistant", 
+    "description": "超级无敌宇宙级求职神器 - 全球最强求职工具包",
+    "total_tools": 25,
+    "supported_languages": ["中文", "English"],
+    "supported_countries": "150+",
+    "ai_powered": true,
+    "big_data_support": true,
+    "platform_integration": true,
+    "smart_decision": true
+  }
+}
